@@ -11,13 +11,13 @@ DEST_FOTOVIDEO = "FOTOVIDEO"
 DEST_PROGRAMMING = "PROGRAMMING"
 DEST_ISO = "ISO"
 
-EXT_PDF = (".pdf",".epub")
+EXT_PDF = (".pdf", ".epub")
 EXT_OFFICE = (".doc", ".docx", ".xlsx", ".csv", ".pptx", ".odp", ".ppt")
 EXT_ARCHIVE = (".zip", ".7z", ".rar")
 EXT_FOTOVIDEO = (".jpeg", ".jpg", ".png", ".mp4", ".mkv", ".mov")
 EXT_PROGRAMMING = (".cpp", ".c", ".py", ".json", ".txt", ".conf")
 EXT_ISO = (".ova", ".iso")
-EXT_MSI = (".msi")
+EXT_MSI = ".msi"
 
 
 def sort_function(source, destination, extension):
@@ -32,7 +32,7 @@ def remove_function(source, extension):
     for root, dirs, files in os.walk(source):
         for f in files:
             if f.lower().endswith(extension):
-                path=os.path.join(root, f)
+                path = os.path.join(root, f)
                 os.remove(path)
 
 
